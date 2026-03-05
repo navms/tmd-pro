@@ -1,0 +1,29 @@
+app:
+  name: tmd-pro
+  env: prod
+  data_dir: ~/.tmd-pro
+  tmd_binary_name: tmd
+  scan_interval_minutes: 30
+  proxy:
+    http_proxy: "http://127.0.0.1:7890"
+    https_proxy: "http://127.0.0.1:7890"
+    no_proxy: "localhost,127.0.0.1"
+
+storage:
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: your_password
+  database: tmd_pro
+  charset: utf8mb4
+
+logger:
+  env: prod
+  level: info
+  file-name: ~/.tmd-pro/logs/app.log
+  max-size: 100
+  max-backups: 10
+  max-age: 30
+  compress: true
+  show-caller: true
+  output-console: true

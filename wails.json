@@ -1,0 +1,18 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "TMD Pro",
+  "outputfilename": "tmd-pro",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "http://localhost:5173",
+  "wailsjsdir": "./frontend/src/wailsjs",
+  "version": "2",
+  "info": {
+    "companyName": "TMD Pro",
+    "productName": "TMD Pro",
+    "productVersion": "1.0.0",
+    "copyright": "Copyright © 2026 TMD Pro",
+    "comments": "基于 tmd 的 X 媒体批量下载桌面管理工具"
+  }
+}
