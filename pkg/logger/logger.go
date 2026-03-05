@@ -157,7 +157,7 @@ func New(cfg Config) (*zap.Logger, error) {
 	// 构建 Logger 选项
 	opts := []zap.Option{
 		zap.ErrorOutput(zapcore.AddSync(os.Stderr)),
-		zap.AddStacktrace(zap.ErrorLevel),
+		zap.AddStacktrace(zap.PanicLevel),
 	}
 	if cfg.ShowCaller {
 		opts = append(opts, zap.AddCaller())
@@ -191,7 +191,7 @@ func buildEncoder(env Env) zapcore.Encoder {
 		return zapcore.NewConsoleEncoder(encoderConfig)
 	case Prod:
 		encoderConfig.EncodeLevel = zapcore.CapitalLevelEncoder
-		encoderConfig.EncodeCaller = zapcore.FullCallerEncoder
+		encoderConfig.EncodeCaller = zapcore.ShortCallerEncoder
 		return zapcore.NewJSONEncoder(encoderConfig)
 	default:
 		encoderConfig.EncodeLevel = zapcore.CapitalLevelEncoder

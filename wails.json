@@ -8,6 +8,7 @@
   "frontend:dev:serverUrl": "http://localhost:5173",
   "wailsjsdir": "./frontend/src/wailsjs",
   "version": "2",
+  "build:flags": "-trimpath",
   "info": {
     "companyName": "TMD Pro",
     "productName": "TMD Pro",
